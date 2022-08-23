@@ -60,7 +60,7 @@
             <el-button type="danger" class="text-right" @click="toOrderForm">去结算<i class="el-icon-arrow-right el-icon--right"></i></el-button>
         </div>
       </footer>
-      <div v-if="cartGoods.length === 0" class="empty-wrap">
+      <div v-if="cartGoods.length === 0" class="empty-wrap">  <!--如果购物车商品个数为0就显示-->
         你还没有添加任何商品哦~
       </div>
   </div>
@@ -89,7 +89,7 @@ export default {
   },
   computed: {
     cartGoods () {
-      return this.$store.state.cartGoods;
+      return this.$store.state.cartGoods;  //state里定义的cardGoods全局变量
     },
     //商品总价
     amount () {
