@@ -1,6 +1,6 @@
 <template>
   <div class="one-commodity" @click="goToDetailsPage">
-    <div class="left" v-loading="loadingImg">
+    <div class="left" v-loading="loadingImg">   <!--v-loading 加载中效果 -->
       <img :src="imgUrl" >
     </div>
     <div class="right">
@@ -125,7 +125,7 @@ export default {
   vertical-align: middle;
 }
 .left{
-  width: 40%;
+  width: 30%;
   height: 100%;
 }
 .left>img{

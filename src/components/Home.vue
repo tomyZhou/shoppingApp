@@ -131,8 +131,23 @@ export default {
   line-height: 40px;
 }
 
+
+/**
+
+C:\workspace\shoppingApp\src\assets\css\vue2-animate.css
+
+@keyframes slideInRight {
+  from {
+    transform: translate3d(100%, 0, 0);
+    visibility: visible;
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+*/
 .slideInRight {
-  animation-duration: 0.25s;
+  animation-duration: 0.25s;   //切换动画，listview 整个是从右边切过来的。 覆盖vue中slideInRight的少数属性 
 }
 
  
