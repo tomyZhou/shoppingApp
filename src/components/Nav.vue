@@ -1,19 +1,19 @@
 <template>
   <nav class="app-nav">
     <router-link to="/Home" >  <!--router-link to  /Home home页面的内容就会放到App.vue 的 router-view容器中-->
-      <div class="nav-item" @click="changeNavImg">
+      <div class="nav-item" @click="changeNavImg(0)">
         <div class="homeImg" :class="homeImgOn"></div>
       </div>
     </router-link>
     <router-link to="/Cart">
-      <div class="nav-item" @click="changeNavImg">
+      <div class="nav-item" @click="changeNavImg(1)">
         <div class="cartImg" :class="cartImgOn">
           <span class="cart-counter" v-show="cartCounter > 0">{{ cartCounter }}</span>
         </div>
       </div>
     </router-link>
     <router-link to="/Profile">
-      <div class="nav-item" @click="changeNavImg">
+      <div class="nav-item" @click="changeNavImg(2)">
         <div class="profileImg" :class="profileImgOn" ></div>
       </div>
     </router-link>
@@ -33,10 +33,18 @@ export default {
   },
   methods: {
     //点击导航菜单时，更新数据，触发 updated
-    changeNavImg () {
+    changeNavImg (position) {
         this.homeImgOn = '';
         this.cartImgOn = '';
         this.profileImgOn = '';
+
+        if(position == 0){
+             this.homeImgOn = 'homeImgOn';
+        }else if(position == 1){
+            this.cartImgOn = 'cartImgOn'
+        }else if(position == 2){
+          this.profileImgOn = 'profileImgOn'
+        }
     },
     // 更新导航图标
     autoChangeCurrentImg() {
@@ -71,9 +79,11 @@ export default {
   mounted () {
     this.autoChangeCurrentImg();
   },
-  updated () {
-    this.autoChangeCurrentImg();
-  }
+
+  //更新就会调这个
+  // updated () {
+  //   this.autoChangeCurrentImg();
+  // }
 }
 </script>
 
