@@ -104,7 +104,7 @@ export default {
   height: $OneCommodityWrapHeight;
   width: 100%;
   font-size: 0;
-  border-bottom: 1px solid #e4e7ed;
+  border-bottom: 1px solid #e4e7ed;  //通过border-bottom实现底部分隔线
   background-color: #ffffff;
 }
 

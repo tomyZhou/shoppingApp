@@ -4,7 +4,7 @@ import Vuex from 'vuex'
 Vue.use(Vuex)
 
 /**
- * 整个项目的全局变量常量定义
+ * 整个项目的全局变量，常量定义
  * 
  * vue中的全局变量 this.$store.state 的取值与赋值
  * 注：如果不在 store目录下的 index.js 定义 则 在其它  ***.vue 页面 代码中赋值，其它页面的这个全局变量，是不会变化的。
