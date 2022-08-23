@@ -1,9 +1,9 @@
 <template>
   <div class="home">
     <home-header></home-header>
-    <div class="home-main">
-      <transition-group enter-active-class="slideInRight">
-        <ul class="goods animated" :key="animatedCurrentKey">
+    <div class="home-main" >
+      <transition-group  enter-active-class="slideInRight">
+        <ul class="goods animated" :key="animatedCurrentKey"  >
           <li v-for="item in goods" class="one-com" v-show="isCurrent(item.kind)">
             <one-commodity :itemId="item.id" :imgUrl="item.img" :title="item.title" :content="item.content"
               :price="item.price" :count="0"></one-commodity>
@@ -147,8 +147,9 @@ C:\workspace\shoppingApp\src\assets\css\vue2-animate.css
 }
 */
 .slideInRight {
-  animation-duration: 0.25s;   //切换动画，listview 整个是从右边切过来的。 覆盖vue中slideInRight的少数属性 
+  animation-duration: 1.25s;   //切换动画，listview 整个是从右边切过来的。 覆盖vue中slideInRight的少数属性 
 }
+ 
 
  
 </style>

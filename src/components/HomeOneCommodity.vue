@@ -125,11 +125,14 @@ export default {
   vertical-align: middle;
 }
 .left{
-  width: 30%;
+  width: 40%;
   height: 100%;
+  text-align: left;  //覆盖掉父容器的居中效果，对非text也有效
+  // background-color: #ff65af;
 }
 .left>img{
   height: 80%;
+  margin-left: 50px;
   transform: translateY(10%);
 }
 .right{
@@ -164,8 +167,8 @@ export default {
   }
   .cart-btn{
     position: absolute;  //绝对布局，只写了bottom,right就表示是靠下，靠右
-    bottom: 5px;
-    right: 10px;
+    bottom: 15px;
+    right: 30px;
     .el-button--danger{
       background-color: #ff65af;
       border-color: #ff65af;
