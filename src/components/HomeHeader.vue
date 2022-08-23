@@ -3,7 +3,7 @@
     <h4 class="top-text"> 一小时达 </h4>
     <div class="tap-menu">
       <el-tabs :tab-position="'top'" type="border-card" style="height: 39px;" v-model="goodsType" @tab-click="changeGoodsType">
-        <el-tab-pane label="全部" name="全部"></el-tab-pane>
+        <el-tab-pane label="全部" name="全部"></el-tab-pane>  <!-- label显示在UI上， name 和 v-model里的值对应起来-->
         <el-tab-pane label="水果" name="水果"></el-tab-pane>
         <el-tab-pane label="蔬菜" name="蔬菜"></el-tab-pane>
         <el-tab-pane label="肉蛋" name="肉蛋"></el-tab-pane>
@@ -36,6 +36,8 @@ export default {
   },
   methods: {
     changeGoodsType () {
+      //给全局变量GoodsCurrentSelKind赋值
+      // alert(this.kindToType.get(this.goodsType))
       this.$store.state.GoodsCurrentSelKind = this.kindToType.get(this.goodsType)
     },
   },

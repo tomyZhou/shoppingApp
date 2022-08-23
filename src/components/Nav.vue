@@ -1,6 +1,6 @@
 <template>
   <nav class="app-nav">
-    <router-link to="/Home" >
+    <router-link to="/Home" >  <!--router-link to  /Home home页面的内容就会放到App.vue 的 router-view容器中-->
       <div class="nav-item" @click="changeNavImg">
         <div class="homeImg" :class="homeImgOn"></div>
       </div>
@@ -104,7 +104,7 @@ export default {
   margin-top: $NavHeight * 0.125;
 }
 .homeImg{
-  background-image: url('../../static/icon/home.png');
+  background-image: url('/static/icon/home.png');
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: $NavHeight * 0.75 * 3  $NavHeight * 0.75;
@@ -113,7 +113,7 @@ export default {
   background-position: 100% 100%;
 }
 .cartImg{
-  background-image: url('../../static/icon/cart.png');
+  background-image: url('/static/icon/cart.png');
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: $NavHeight * 0.75 * 3  $NavHeight * 0.75;
@@ -122,7 +122,7 @@ export default {
   background-position: 100% 100%;
 }
 .profileImg{
-  background-image: url('../../static/icon/profile.png');
+  background-image: url('/static/icon/profile.png');
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: $NavHeight * 0.75 * 3  $NavHeight * 0.75;

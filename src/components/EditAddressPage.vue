@@ -41,7 +41,7 @@ export default {
       this.$router.push({
         path: '/Profile'
       })
-      //解决主页与详情页切换时，菜单栏无法更新获取当前路由的问题
+      //解决主页与详情页切换时，菜单栏无法更新获取当前路由的问题。用store里的全局变量
       this.$store.state.cartCounter++;
       this.$store.state.cartCounter--;
     },

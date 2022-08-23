@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <keep-alive>
-      <router-view/>
+    <keep-alive> <!--缓存页面内容-->
+      <router-view/>  <!-- 路由出口 --><!-- 路由匹配到的组件将渲染在这里 -->
     </keep-alive>
     <app-nav></app-nav>
   </div>
@@ -21,7 +21,9 @@ export default {
 <style lang="scss">
 // el-ui 的默认样式
 @import "./assets/css/element-ui-modify.scss";
-// 变量
+
+
+// 引入css定义的变量
 @import "./assets/css/variable.scss";
 
 #app {

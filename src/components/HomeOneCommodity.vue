@@ -1,7 +1,7 @@
 <template>
   <div class="one-commodity" @click="goToDetailsPage">
     <div class="left" v-loading="loadingImg">
-      <img :src="imgUrl">
+      <img :src="imgUrl" >
     </div>
     <div class="right">
       <div class="text">
@@ -25,7 +25,9 @@
 
 export default {
   name: 'one-commodity',
+  //只有在props里定义的的属性才能在调用它的地方的标签里赋值
   props: ['itemId','imgUrl', 'title', 'content', 'price', 'count'],
+  
   data () {
     return {
       loadingImg: true,
@@ -94,6 +96,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+//引入scss中定义的变量
 @import "../assets/css/variable.scss";
 
 .one-commodity{
@@ -101,10 +105,22 @@ export default {
   width: 100%;
   font-size: 0;
   border-bottom: 1px solid #e4e7ed;
-  background-color: #fff;
+  background-color: #ffffff;
 }
+
+
+// /**
+//  *   https://blog.csdn.net/weixin_30613433/article/details/97448356
+//  *
+// *    sass是一种基于ruby语言开发的CSS预处理器。它可以使用变量，嵌套，混入，继承，运算，函数等编程语言具有的特性进行CSS的开发，使得CSS的开发变得简单粗暴清晰可维护。
+// *    sass有两种后缀文件格式：一种是sass后缀形式；一种是scss后缀形式。我选择的后缀是scss
+// *
+// *    变量的声明必须是$开头，后面接着变量名，（就像php一样），而变量名和变量值之间则用：连接（就像写CSS一样）。在值的后面加上!default表示默认值。如果变量需要镶嵌在字符串之中，就必须需要写在#{}之中。
+// *
+// *    src/assets/css/variable.scss 中定义了这些变量
+// */
 .one-commodity>div{
-  font-size: $GobalFontSize;
+  font-size: $GobalFontSize;   
   display: inline-block;
   vertical-align: middle;
 }
@@ -132,6 +148,12 @@ export default {
   .title{
 
   }
+
+  .test{
+    width: $HelloWrapWidth;
+    height: $HelloWrapHeight;
+  }
+
   .price {
 
     .price-number{
@@ -141,7 +163,7 @@ export default {
     }
   }
   .cart-btn{
-    position: absolute;
+    position: absolute;  //绝对布局，只写了bottom,right就表示是靠下，靠右
     bottom: 5px;
     right: 10px;
     .el-button--danger{
@@ -152,9 +174,10 @@ export default {
 
 }
 
+//响应式布局，根据屏幕尺寸动态调整item的高度
 @media screen and (min-width: 600px) {
   .one-commodity{
-    height: $OneCommodityWrapHeight600;
+    height: $OneCommodityWrapHeight600;   
   }
 }
 @media screen and (min-width: 800px) {
@@ -164,7 +187,7 @@ export default {
 }
   @media screen and (min-width: 1025px) {
   .one-commodity{
-    height: $OneCommodityWrapHeight1025;
+    height: $OneCommodityWrapHeight1025;  
   }
 }
 </style>
