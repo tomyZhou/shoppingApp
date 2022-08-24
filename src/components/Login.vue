@@ -6,13 +6,13 @@
       </span>
       <h3>登录</h3>
     </header>
-    <main>
+    <main2>
       <div class="login">
         <el-form>
-          <el-form-item>
+          <el-form-item label = "账号:" label-width = "60px" >
             <el-input v-model="username" placeholder="请输入帐号"></el-input>
           </el-form-item>
-          <el-form-item>
+          <el-form-item  label = "密码:" label-width = "60px" >
             <el-input type="password" v-model="password" placeholder="请输入密码"></el-input>
           </el-form-item>
           <el-form-item>
@@ -21,7 +21,7 @@
           </el-form-item>
         </el-form>
       </div>
-    </main>
+    </main2>
   </div>
 </template>
 
@@ -65,7 +65,7 @@ export default {
       transform: translateY(-50%);
     }
   }
-  main{
+  main2{
     width: 80%;
     position: absolute;
     top: 50%;

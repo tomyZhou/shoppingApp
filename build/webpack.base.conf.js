@@ -19,6 +19,7 @@ const createLintingRule = () => ({
   }
 })
 
+//整个项目的入口文件配置在这里
 module.exports = {
   context: path.resolve(__dirname, '../'),
   entry: {
